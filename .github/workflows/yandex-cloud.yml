@@ -35,7 +35,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: ./app
-          file: ./app/Dockerfile
+          file: ./app/Dockerfile.prod
           push: true
           tags: ${{ env.BACKEND_IMAGE }}
 
