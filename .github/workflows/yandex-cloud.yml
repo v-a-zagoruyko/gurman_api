@@ -83,10 +83,10 @@ jobs:
           folder-id: ${{ secrets.YC_FOLDER_ID }}
           VM-name: "gurman-api"
           vm-service-account-id: ${{ secrets.YC_SERVICE_ACCOUNT_ID }}
-          vm-cores: 4
+          vm-cores: 2
           vm-platform-id: "standard-v2"
-          vm-memory: 2Gb
-          vm-disk-size: 50Gb
+          vm-memory: 4Gb
+          vm-disk-size: 30Gb
           vm-core-fraction: 5
           vm-subnet-id: ${{ secrets.YC_SUBNET_ID }}
           docker-compose-path: "./yandex-cloud/docker-compose.yc.yaml"
