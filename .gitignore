@@ -1,0 +1,4 @@
+app/env/
+.env.prod
+*.sqlite3
+*.pyc
