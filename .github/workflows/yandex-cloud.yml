@@ -17,7 +17,7 @@ env:
 jobs:
   build-backend:
     runs-on: ubuntu-latest
-
+    environment: dev
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -41,6 +41,7 @@ jobs:
 
   build-nginx:
     runs-on: ubuntu-latest
+    environment: dev
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -64,6 +65,7 @@ jobs:
 
   update-yc:
     runs-on: ubuntu-latest
+    environment: dev
     needs: [build-backend, build-nginx]
     steps:
       - name: Checkout
