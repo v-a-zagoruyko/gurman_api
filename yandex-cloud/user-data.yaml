@@ -6,3 +6,9 @@ users:
     sudo: ["ALL=(ALL) NOPASSWD:ALL"]
     ssh_authorized_keys:
       - {{ env.YC_VM_SSH }}
+write_files:
+    - path: /etc/environment
+      permissions: 0644
+      content: |
+        COREOS_PUBLIC_IPV4=1.1.1.1
+        BACKEND_IMAGE_TAG={{ env.BACKEND_IMAGE }}
